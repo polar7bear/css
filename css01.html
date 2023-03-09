@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 기본</title>
+    <style>
+    /*
+        스타일 지정의 기본 문법 w3school
+        선택자 { 스타일속성1:값; 스타일속성2:값 }
+        선택자 : 스타일을 부여할 대상
+    */
+    * { margin: 0; padding: 0;} /* 전체 선택자 */
+    h2 { border-bottom:3px dotted deeppink; } /* 태그 선택자 */
+    .para { color: skyblue; } /* 클래스 선택자 */
+    #con1 { font-size:24px; color:yellowgreen;}/* 아이디 선택자 */
+    p.para { color:blue; } /* 복합 선택자 */
+    p#con2 { color:rgb(244, 5, 236); } /* 복합 선택자 */
+    /* div, p {border-top:1px solid #333; margin-top:30px;} 복수 선택자*/
+    /* 아이디>클래스>태그 우선순위별로 스타일 적용 */ 
+    
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목</h2>
+        <p id="con1" class="para">손승기</p>
+        <p id="con2" class="para">손철수</p>
+        <p id="con3" class="para">손민철</p>
+    </div>
+</body>
+</html>
