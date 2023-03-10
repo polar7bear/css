@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 속성 선택자</title>
+    <style>
+        a { font-size: 50px;}
+        a[href^="http:"]{ color : seagreen; }
+        a[href*="7985"]{color : royalblue; font-size: 40px;}
+        img{ width:400px; height: 500px; margin-right:50px;}
+        img[src$="png"]{ border:10px solid aquamarine;}
+        img[src$="jpg"]{ border:10px solid khaki;}
+        img[src$="jfif"]{ border:10px solid hotpink;}
+        img[src$="gif"]{ border:10px solid chocolate;}
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        <a title="href가 없는 링크">링크1</a><br>
+        <a href="kbs.html" title="href가 있는 링크">링크2</a><br>
+        <a href="https://www.google.com" title="구글 링크">링크3</a><br>
+        <a href="guide.pdf" title="문서 다운로드 링크">링크4</a><br>
+        <a href="http://www.naver.com" title="네이버 링크">링크5</a><br>
+        <a href="http://github.com" title="깃허브 링크">링크6</a><br>
+        <a href="tel:010-7985-7958" title="전화걸기 링크">링크7</a><br>
+        <a href="sms:010-2348-1234" title="문자보내기 링크">링크8</a><br>
+    </div>
+    <div>
+        <img src="1.jpg" alt="">
+        <img src="2.png" alt="">
+        <img src="3.gif" alt="">
+        <img src="4.jfif" alt="">
+    </div>
+</body>
+</html>

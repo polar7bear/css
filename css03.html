@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 구조 선택자</title>
+    <style>
+        /*형제요소*/
+        h2+ul { list-style: square; } /* 인접(next) 요소 선택자 */
+        ul+ul { list-style: circle; } 
+        h2~ul { border:3px solid greenyellow; } /* 인접(nextAll) 요소들 선택자 */
+        .con li { text-decoration:underline; } /* 조상 후손 */
+        .con > ul > li { border-bottom:2px solid rosybrown; } /* 부모 > 자식 > 후손 */
+        /* 순서 위치 선택자 */
+        li:first-child { color:goldenrod; } /* 첫 번째 */
+        li:last-child { color: aqua; } /* 마지막 요소 */
+        li:nth-chi9ld(2) { color:salmon; } /* 2번째 요소 */
+        li:only-child { font-style: italic; color: chartreuse; } /* 독자 */
+        li:nth-child(2n) { background-color: red; } /* 짝수 번째 */
+        li:nth-child(2n+1) { background-color: fuchsia; } /* 홀수 번째 */
+
+        li:first-of-type { padding-left:120px; } /*순서가 중요함(거의 안쓰임)*/
+    </style>
+</head>
+<body>
+    <div>
+        <h2>요소안의 목록 요소</h2>
+        <ul class="lst1">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+        <ul class="lst2">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+        <ul class="lst3">
+            <li>내용1</li>
+        </ul>
+    </div>
+    <hr>
+    <article>
+        <h2>article 요소 안의 목록</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+        <ol>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ol>
+    </article>
+    <div class="con">자식이 없는 요소</div>
+    <div class="con">여기는 내용
+       <p title="내용이 없는 요소"></p> 
+    </div>
+</body>
+</html>
