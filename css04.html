@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 링크선택자</title>
+    <style>
+    a { font-size:24px; text-decoration: none;}
+    a:link { color : blue; }
+    a:visited { background-color: lime; color: aquamarine; }               /* link와 visited는 a태그에서만 가능*/
+    a:hover { background-color: blueviolet; color:darkorange; }                 /* 마우스를 올리고 있을때 */
+    a:active { background-color: teal; color:yellow; }                /* 마우스로 누르고 있을때 */
+        
+        /* 전/후 선택자 */
+    a::before { content: "★ "}              
+    a::after { content: " - "attr(href);}                
+        
+        /* 첫글자/첫 줄 선택자*/
+    p::first-letter { font-size: 30px; }
+    p::first-line { color:chartreuse; }
+
+    section { width:600px; height:300px;border:3px solid black; background: aqua; display:none;}
+    section:target {display:block;}
+    /* http://127.0.0.1:5500/css04.html#sec3 */
+    /* 폼 관련 선택자 
+    input:enabled - 사용가능한 input 요소를 선택
+    input:disabled - 사용불가능한 input 요소를 선택
+    input:focus - 커서가 들어왔을때 선택
+    input:placeholder - placeholder 속성의 값을 선택 */
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://www.google.com" title="구글">링크1</a><br><br>
+        <a href="https://www.naver.com" title="네이버">링크2</a><br><br>
+        <a href="https://www.tjoeun.co.kr" title="더조은">링크3</a><br><br>
+        <a href="https://www.daum.net" title="다음">링크4</a><br><br>
+        <a title="링크 없는 a요소">링크5</a><br><br>
+    </nav>
+    <div>
+        <p>
+            경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 
+            경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 
+            경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 
+            경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동 경기도 고양시 일산서구 대화동   
+        </p>
+        <p>
+            대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  
+            대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  
+            대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  
+            대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  대한민국 서울특별시 강남구  
+            </p> 
+    </div>
+    <hr>
+    <input type = "checkbox" id="ck1">
+    <label for="ck1" id="btn1"></label>
+    <div id="box">여기는 펼침창</div>
+    <div>
+        <ul>
+            <li><a href="#sec1">메뉴1</a></li>
+            <li><a href="#sec2">메뉴2</a></li>
+            <li><a href="#sec3">메뉴3</a></li>
+        </ul>
+    </div>
+    <section id="sec1">
+        <h2>섹션 제목1</h2>
+    </section>
+    <section id="sec2">
+        <h2>섹션 제목2</h2>
+    </section>
+    <section id="sec3">
+        <h2>섹션 제목3</h2>
+    </section>
+
+</body>
+</html>
